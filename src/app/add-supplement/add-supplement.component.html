@@ -1,0 +1,52 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Supplement :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Supplement</label>
+        <input type="text" [(ngModel)]="newSupplement.idSupplement"
+        name="idSupplement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Supplement</label>
+        <input type="text"[(ngModel)]= "newSupplement.nomSupplement"
+        name="nomSupplement" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Prix Supplement</label>
+        <input type="number" [(ngModel)]= "newSupplement.prixSupplement"
+        name="prixSupplement" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Dosage</label>
+        <input type="number" [(ngModel)]= "newSupplement.dosageSupplement"
+        name="dosageSupplement" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date création</label>
+        <input type="date" [(ngModel)]= "newSupplement.dateCreation"
+        name="dateCreation" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nutritional</label>
+            <select class="form-control form-control-lg" id="idNut" name="idNut"
+            [(ngModel)]="newIdNut">
+             <option *ngFor="let nut of nutritionals" [value]="nut.idNut" >
+             {{nut.nomNut}}
+            </option>
+            </select>
+            </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addSupplement()"class="btn btn-success">Ajouter</button>
+        <div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+</div>
+        <div>
+
+        </div>
+            
+        </div>
+        </div>
+        </form>
+        </div>
